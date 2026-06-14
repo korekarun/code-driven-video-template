@@ -1,0 +1,32 @@
+# ── Secrets ─────────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# Your private pronunciation dictionary (keep only the .sample committed)
+tts/pronunciation_dict.yaml
+
+# ── Node / Remotion ─────────────────────────────────────────────────────────
+node_modules/
+remotion/node_modules/
+remotion/.cache/
+remotion/build/
+remotion/out/
+out/
+
+# ── Generated media (audio is synthesized, videos are rendered) ─────────────
+remotion/public/**/*.wav
+remotion/public/**/*.mp3
+remotion/public/**/*_timings.json
+*.mp4
+!remotion/public/**/.gitkeep
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ── OS / editor ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

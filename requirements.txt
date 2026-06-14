@@ -1,0 +1,3 @@
+# Python dependencies for the TTS layer (tts/).
+# Install with:  pip install -r requirements.txt
+azure-cognitiveservices-speech>=1.40.0

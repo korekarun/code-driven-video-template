@@ -1,0 +1,15 @@
+# Pronunciation dictionary (optional).
+#
+# Maps a written term to the reading you want the TTS engine to speak. Useful for
+# acronyms, brand names, or words the voice mispronounces. Each entry is applied
+# via SSML <sub alias="...">, so the reading is forced regardless of the voice.
+#
+# To use your own: copy this file to `pronunciation_dict.yaml` (same folder) and
+# edit it. The real file is git-ignored so your terms stay private.
+#
+# Format:  "written form": "reading"
+
+"Remotion": "ReMOEshun"
+"TTS": "text to speech"
+"MP4": "em pee four"
+"GitHub": "Git Hub"

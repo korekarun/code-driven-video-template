@@ -1,0 +1,31 @@
+{
+  "name": "code-driven-video-template",
+  "version": "1.0.0",
+  "description": "Open-source Remotion + Azure TTS template for generating narrated data videos from a script.",
+  "license": "MIT",
+  "dependencies": {
+    "@remotion/cli": "4.0.454",
+    "@remotion/google-fonts": "4.0.454",
+    "@remotion/tailwind-v4": "4.0.454",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.454",
+    "tailwindcss": "4.0.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.454",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render SampleDemo out/sample_demo.mp4",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

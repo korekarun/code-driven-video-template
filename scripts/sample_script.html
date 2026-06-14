@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+  sample_script.html — the single source of truth for one video.
+
+  Open this file in a browser to read it, or feed it to the pipeline:
+    1. python tts/generate_tts.py scripts/sample_script.html   (narration -> audio + timings)
+    2. The <section> order + props below are mirrored in
+       remotion/src/videos/sample_demo/props.js
+    3. npx remotion render SampleDemo out/sample_demo.mp4
+
+  Each <section data-slide="N"> is one slide:
+    - data-scene        -> the React component in remotion/src/scenes/
+    - <p data-narration> -> spoken by the TTS engine (multiple <p> are joined)
+    - <script data-props> -> props passed to the scene component
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sample Demo — Code-Driven Video Template</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0c0c14; color: #eee; max-width: 760px; margin: 40px auto; padding: 0 20px; }
+    section { border: 1px solid #333; border-radius: 10px; padding: 16px 20px; margin: 18px 0; }
+    .scene-name { color: #4dabf7; font-weight: 700; letter-spacing: .04em; }
+    .slide-num { color: #888; font-size: 13px; }
+    .narration { color: #ddd; line-height: 1.7; margin-top: 8px; }
+    pre { background: #15151f; padding: 10px; border-radius: 6px; overflow-x: auto; font-size: 12px; color: #9cc; }
+  </style>
+
+  <!-- Global metadata read by generate_tts.py and mirrored in props.js -->
+  <script type="application/json" id="meta">
+  {
+    "theme": "sample_demo",
+    "title": "Code-Driven Video Template",
+    "accent": "#4dabf7",
+    "totalSlides": 5,
+    "voice": "en-US-AndrewMultilingualNeural"
+  }
+  </script>
+</head>
+<body>
+  <h1>Sample Demo</h1>
+
+  <section data-scene="TitleCinematic" data-slide="1" data-section-type="prob">
+    <div class="slide-num">01</div>
+    <div class="scene-name">TitleCinematic</div>
+    <div class="narration">
+      <p data-narration>This is a code-driven video template. Write a script, run one command, and get a narrated video.</p>
+    </div>
+    <script type="application/json" data-props>{ "titleLines": ["CODE-DRIVEN", "VIDEO TEMPLATE"] }</script>
+  </section>
+
+  <section data-scene="ChapterTransition" data-slide="2" data-section-type="data">
+    <div class="slide-num">02</div>
+    <div class="scene-name">ChapterTransition</div>
+    <div class="narration">
+      <p data-narration>Here is how it works. There are three moving parts: the script, the voice, and the renderer.</p>
+    </div>
+  </section>
+
+  <section data-scene="BigNumberLiving" data-slide="3" data-section-type="data">
+    <div class="slide-num">03</div>
+    <div class="scene-name">BigNumberLiving</div>
+    <div class="narration">
+      <p data-narration>Just three steps turn plain text into a finished, narrated video.</p>
+    </div>
+    <script type="application/json" data-props>{ "number": "3", "unit": "steps" }</script>
+  </section>
+
+  <section data-scene="ConceptDrawing" data-slide="4" data-section-type="data">
+    <div class="slide-num">04</div>
+    <div class="scene-name">ConceptDrawing</div>
+    <div class="narration">
+      <p data-narration>Your script becomes audio. The audio becomes timed scenes. And Remotion renders the final video.</p>
+    </div>
+  </section>
+
+  <section data-scene="KeyPointList" data-slide="5" data-section-type="sol">
+    <div class="slide-num">05</div>
+    <div class="scene-name">KeyPointList</div>
+    <div class="narration">
+      <p data-narration>It is open source, it uses your own API key, and every scene is plain React you can customize.</p>
+    </div>
+  </section>
+</body>
+</html>
